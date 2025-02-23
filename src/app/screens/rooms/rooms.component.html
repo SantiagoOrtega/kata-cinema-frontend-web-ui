@@ -1,0 +1,17 @@
+<sp-ml-header 
+    back='TRUE' 
+    close='TRUE' 
+    icon-secundary="" 
+    label-secundary="" 
+    icon-tertiary="" 
+    label-tertiary=""
+/>
+<div class="rooms-screen">
+    <h4 class="main-title">
+        ¡Excelente, estas cerca de completar tu reserva para {{ movieSelected }}!
+    </h4>
+    <sp-ml-dynamic-table 
+        [columnTable]="columnTable"
+        [rowTable]="rowTable"
+    />
+</div>

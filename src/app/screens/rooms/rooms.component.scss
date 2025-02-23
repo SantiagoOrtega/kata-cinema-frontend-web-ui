@@ -1,0 +1,11 @@
+@import '../../../styles.scss';
+
+.rooms-screen {
+    margin: 75px;
+    .main-title {
+        font-family: $KiffoSemiBold;
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 40px;
+    }
+}

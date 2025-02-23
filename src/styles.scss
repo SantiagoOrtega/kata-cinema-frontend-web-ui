@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+$font-family-path: "~@npm-bbta/bbog-dig-dt-sherpa-lib/dist/collection";
+@import "@npm-bbta/bbog-dig-dt-sherpa-lib/dist/collection/assets/fonts/fonts.scss";
+
+$icons-path: "~@npm-bbta/bbog-dig-dt-sherpa-lib/dist/collection";
+@import "@npm-bbta/bbog-dig-dt-sherpa-lib/dist/collection/assets/fonts/icons.scss";
+
+* {
+	box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+	margin: 0;
+}
+
+a {
+	cursor: pointer;
+}
+
+html,
+body {
+	max-width: 100vw;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	height: 100vh;
+}
