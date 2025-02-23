@@ -1,0 +1,19 @@
+<sp-ml-header 
+    back='TRUE' 
+    close='TRUE' 
+    icon-secundary="" 
+    label-secundary="" 
+    icon-tertiary="" 
+    label-tertiary=""
+/>
+<div class="summary-screen">
+    <h4 class="main-title">
+        Resumen de tu reserva
+    </h4>
+    <sp-ml-compound-list 
+        [dataSections]="getSummaryList()">
+    </sp-ml-compound-list>
+</div>
+<div>
+    <button class='sp-at-btn sp-at-btn--primary sp-at-btn--lg '  >Confirmar</button>
+</div>

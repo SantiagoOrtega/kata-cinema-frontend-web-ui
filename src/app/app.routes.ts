@@ -15,6 +15,10 @@ export const routes: Routes = [
         loadComponent: () => import('./screens/rooms/rooms.component').then((c) => c.RoomsComponent),
     },
     {
+        path: 'summary',
+        loadComponent: () => import('./screens/summary/summary.component').then((c) => c.SummaryComponent),
+    },
+    {
         path: '**',
         redirectTo: 'movies'
     },

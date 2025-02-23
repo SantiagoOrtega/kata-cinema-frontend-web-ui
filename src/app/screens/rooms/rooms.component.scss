@@ -42,4 +42,17 @@
     .buttonTime {
         margin-bottom: 7px;
     }
+    .email {
+        margin-top: 40px;
+        p {
+            font-family: $RobotoRegular;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--sp-carbon-800);
+            margin-bottom: 15px;
+        }
+        button {
+            margin-top: 24px;
+        }
+    }
 }

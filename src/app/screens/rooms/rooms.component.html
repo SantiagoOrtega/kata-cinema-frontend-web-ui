@@ -22,30 +22,42 @@
         <div class="schedules">
             <p>Selecciona el horario en {{ roomSelected }}:</p>
         </div>
-        <button (click)="onScheduleClick()" class='sp-at-btn sp-at-btn--secondary sp-at-btn--sm--ico buttonTime'  ><span class='ico-calendar-default'></span>
-            2:00 PM
-        </button>
-        <button (click)="onScheduleClick()" class='sp-at-btn sp-at-btn--secondary sp-at-btn--sm--ico buttonTime'  ><span class='ico-calendar-default'></span>
-            4:00 PM
-        </button>
-        <button (click)="onScheduleClick()" class='sp-at-btn sp-at-btn--secondary sp-at-btn--sm--ico buttonTime'  ><span class='ico-calendar-default'></span>
-            6:00 PM
-        </button>
-        <button (click)="onScheduleClick()" class='sp-at-btn sp-at-btn--secondary sp-at-btn--sm--ico buttonTime'  ><span class='ico-calendar-default'></span>
-            8:00 PM
-        </button>
+        <sp-at-radio-button #radiobuttons is-horizontal=true margin-left="24px"  
+            values-to-radio='[
+                { "label":"2:00 PM", "value": "lbl1", "isChecked": "false"},
+                { "label":"4:00 PM", "value": "lbl2", "isChecked": "false"},
+                { "label":"6:00 PM", "value": "lbl3", "isChecked": "false"},
+                { "label":"8:00 PM", "value": "lbl4", "isChecked": "false"},
+                { "label":"10:00 PM", "value": "lbl5", "isChecked": "false"}]' (radioEmitter)="onScheduleClick($event)">
+        </sp-at-radio-button>
     </div>
-    <div *ngIf="true" class="schedules">
+    <div *ngIf="showSeats" class="schedules">
         <p>Selecciona tus asientos:</p>
     </div>
-    <div *ngIf="true" class="seats">
+    <div *ngIf="showSeats" class="seats">
         <sp-ml-active-selector
             *ngFor="let n of seatArray"
             icon="ico-generico-personas" 
             [text]="n" 
             disabled="false"
             height="50px"
-            width="35px">
+            width="35px"
+            (actSelectClicked)="onSeatClick($event)">
         </sp-ml-active-selector>
+    </div>
+    <div *ngIf="showConfirm" class="email">
+        <p>Te enviaremos un correo electrónico con el resumen de tu reserva</p>
+        <sp-at-autocomplete  
+            message="" 
+            placeholder="correo electrónico" 
+            type="EMAIL" 
+            status="ENABLED" 
+            required="true"
+            (atInputChanged)="validateEmail($event)"
+            email-complements='["@gmail.com","@hotmail.com","@outlook.com","@msn.com","@yahoo.com"]'>
+        </sp-at-autocomplete>
+        <button class='sp-at-btn sp-at-btn--primary sp-at-btn--lg '
+        [disabled]="!submitValid"
+        (click)="onConfirmClick()"  >Continuar</button>
     </div>
 </div>
