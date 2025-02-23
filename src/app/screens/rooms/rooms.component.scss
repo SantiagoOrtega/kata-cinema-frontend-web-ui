@@ -8,4 +8,38 @@
         line-height: 36px;
         margin-bottom: 40px;
     }
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 24px;
+        p {
+            font-family: $RobotoRegular;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--sp-carbon-800);
+        }
+    }
+    .schedules {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 30px;
+        margin-bottom: 24px;
+        p {
+            font-family: $RobotoRegular;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--sp-carbon-800);
+        }
+    }
+    .seats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+    .buttonTime {
+        margin-bottom: 7px;
+    }
 }

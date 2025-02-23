@@ -10,8 +10,42 @@
     <h4 class="main-title">
         ¡Excelente, estas cerca de completar tu reserva para {{ movieSelected }}!
     </h4>
+    <div class="description">
+        <p>Selecciona la sala que desees:</p>
+    </div>
     <sp-ml-dynamic-table 
         [columnTable]="columnTable"
         [rowTable]="rowTable"
+        (buttonClick)="showSchedules($event)"
     />
+    <div *ngIf="showSchedulesByRoom">
+        <div class="schedules">
+            <p>Selecciona el horario en {{ roomSelected }}:</p>
+        </div>
+        <button (click)="onScheduleClick()" class='sp-at-btn sp-at-btn--secondary sp-at-btn--sm--ico buttonTime'  ><span class='ico-calendar-default'></span>
+            2:00 PM
+        </button>
+        <button (click)="onScheduleClick()" class='sp-at-btn sp-at-btn--secondary sp-at-btn--sm--ico buttonTime'  ><span class='ico-calendar-default'></span>
+            4:00 PM
+        </button>
+        <button (click)="onScheduleClick()" class='sp-at-btn sp-at-btn--secondary sp-at-btn--sm--ico buttonTime'  ><span class='ico-calendar-default'></span>
+            6:00 PM
+        </button>
+        <button (click)="onScheduleClick()" class='sp-at-btn sp-at-btn--secondary sp-at-btn--sm--ico buttonTime'  ><span class='ico-calendar-default'></span>
+            8:00 PM
+        </button>
+    </div>
+    <div *ngIf="true" class="schedules">
+        <p>Selecciona tus asientos:</p>
+    </div>
+    <div *ngIf="true" class="seats">
+        <sp-ml-active-selector
+            *ngFor="let n of seatArray"
+            icon="ico-generico-personas" 
+            [text]="n" 
+            disabled="false"
+            height="50px"
+            width="35px">
+        </sp-ml-active-selector>
+    </div>
 </div>

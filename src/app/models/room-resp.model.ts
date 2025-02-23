@@ -1,4 +1,4 @@
 export interface RoomModel {
-    name: string;
+    room: string;
     capacity: number;
 }
