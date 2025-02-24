@@ -1,0 +1,33 @@
+@import '../../../styles.scss';
+
+.your-reservations-screen {
+    margin: 75px;
+    .email {
+        margin-top: 40px;
+        p {
+            font-family: $RobotoRegular;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--sp-carbon-800);
+            margin-bottom: 15px;
+        }
+        button {
+            margin-top: 24px;
+            margin-bottom: 40px;
+        }
+    }
+    .list-reservations {
+        margin-bottom: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+    }
+    p {
+        font-family: $RobotoRegular;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--sp-carbon-800);
+        margin-bottom: 15px;
+    }
+      
+}

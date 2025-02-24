@@ -1,0 +1,33 @@
+<sp-ml-header 
+    back='TRUE' 
+    close='TRUE' 
+    icon-secundary="" 
+    label-secundary="" 
+    icon-tertiary="" 
+    label-tertiary=""
+/>
+<div class="your-reservations-screen">
+    <div class="email">
+        <p>A continuación encontrarás un resumen de tus reservas, por favor ingresa el correo electrónico que usaste para reservar tu función</p>
+        <sp-at-autocomplete  
+            message="" 
+            placeholder="correo electrónico" 
+            type="EMAIL" 
+            status="ENABLED" 
+            required="true"
+            (atInputChanged)="validateEmail($event)"
+            email-complements='["@gmail.com","@hotmail.com","@outlook.com","@msn.com","@yahoo.com"]'>
+        </sp-at-autocomplete>
+        <button class='sp-at-btn sp-at-btn--primary sp-at-btn--lg '
+        [disabled]="!submitValid"
+        (click)="onConfirmClick()"  >Continuar</button>
+    </div>
+    <div *ngFor="let reservation of reservationsList" class="list-reservations">
+        <sp-ml-compound-list 
+            [dataSections]="[reservation]">
+        </sp-ml-compound-list>
+    </div>
+    <p *ngIf="messageNoReservations">{{ messageNoReservations }}</p>
+    <button class='sp-at-btn sp-at-btn--primary sp-at-btn--lg '
+        (click)="onBackClick()"  >Volver</button>
+</div>

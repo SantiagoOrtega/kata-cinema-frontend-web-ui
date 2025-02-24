@@ -85,8 +85,8 @@ export class SummaryComponent implements OnInit{
     this.reservationService.addReservation(reservationBody).subscribe({
       next: (data) => {
         console.log('Reserva exitosa:', data);
-        alert('Reserva exitosa');
         this.callEmailService();
+        alert('Reserva exitosa');
         this.router.navigate(['/movies']);
       },
       error: (err) => {

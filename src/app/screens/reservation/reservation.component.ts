@@ -16,7 +16,7 @@ export class ReservationComponent {
   private router = inject(Router);
   
   public goToYourReservations(){
-    this.router.navigate(['/rooms']);
+    this.router.navigate(['/your-reservations']);
   }
 
 }

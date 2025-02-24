@@ -2,11 +2,21 @@
 
 .movie-screen {
     margin: 75px;
+    .main-title {
+        font-family: $KiffoSemiBold;
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 40px;
+    }
     p {
         font-family: $RobotoRegular;
         font-size: 16px;
         line-height: 24px;
         color: var(--sp-carbon-800);
         margin-top: 30px;
+    }
+    .check-here {
+        cursor: pointer;
+        color: darkblue;
     }
 }

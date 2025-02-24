@@ -19,6 +19,10 @@ export const routes: Routes = [
         loadComponent: () => import('./screens/summary/summary.component').then((c) => c.SummaryComponent),
     },
     {
+        path: 'your-reservations',
+        loadComponent: () => import('./screens/your-reservations/your-reservations.component').then((c) => c.YourReservationsComponent),
+    },
+    {
         path: '**',
         redirectTo: 'movies'
     },

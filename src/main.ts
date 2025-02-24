@@ -10,8 +10,8 @@ defineCustomElements();
 bootstrapApplication(AppComponent, {
   ...appConfig,
   providers: [
-    ...appConfig.providers || [], // Mantiene los providers existentes
+    ...appConfig.providers || [],
     importProvidersFrom(HttpClientModule)
   ]
 })
-.catch((err: any) => console.error(err));
+.catch((err) => console.error(err));

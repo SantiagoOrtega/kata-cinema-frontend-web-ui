@@ -38,4 +38,10 @@ export class ReservationService {
     );
   }
 
+  public getReservationsByEmail(email: string) {
+    return this.http.get<any>(
+      `${environment.cinema.host}/${environment.cinema.getReservationsByEmailPath}?email=${encodeURIComponent(email)}`
+    )
+  }
+
 }

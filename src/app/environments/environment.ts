@@ -4,6 +4,7 @@ export const environment = {
         getMoviesPath: 'movie/getMovies',
         getRoomsPath: 'room/getRooms',
         addReservationPath: 'reservation/addReservation',
-        sendEmailPath: 'email/send'
+        sendEmailPath: 'email/send',
+        getReservationsByEmailPath: 'reservation/getReservationsByEmail'
     }
 }

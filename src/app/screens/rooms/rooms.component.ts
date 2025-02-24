@@ -36,8 +36,6 @@ export class RoomsComponent implements OnInit {
 
   public rowTable: RoomsTableRow[] = [];
 
-  @ViewChildren('radiobuttons') radioButtons: any;
-
   public readonly columnTable = [
     { colName: "Sala", control: "text" },
     { colName: "Capacidad", control: "text" },
@@ -68,7 +66,6 @@ export class RoomsComponent implements OnInit {
     this.showSeats = false;
     this.showConfirm = false;
     this.showSchedulesByRoom = true;
-    // this.radioButtons.nativeElement.resetRadio();
     this.seatsCount = 0;
     this.seatsSelectedArray = [];
     console.log("sillas reset", this.seatsCount);
