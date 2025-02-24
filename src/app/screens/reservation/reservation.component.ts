@@ -1,5 +1,7 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { MovieListComponent } from '../../components/movie-list/movie-list.component';
+import { ReservationService } from '../../services/reservation/reservation.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reservation',
@@ -10,5 +12,11 @@ import { MovieListComponent } from '../../components/movie-list/movie-list.compo
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ReservationComponent {
+
+  private router = inject(Router);
   
+  public goToYourReservations(){
+    this.router.navigate(['/rooms']);
+  }
+
 }

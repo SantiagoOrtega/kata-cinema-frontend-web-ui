@@ -6,4 +6,9 @@
     icon-tertiary="" 
     label-tertiary=""
 />
-<app-movie-list></app-movie-list>
+<div class="movie-screen">
+    <app-movie-list></app-movie-list>
+    <p>
+        ¿Ya realizaste una reserva? <span (click)="goToYourReservations()" style="cursor: pointer; color: blue;">Revisala aquí.</span>
+    </p>
+</div>
