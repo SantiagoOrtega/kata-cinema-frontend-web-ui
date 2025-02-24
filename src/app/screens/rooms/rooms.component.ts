@@ -83,10 +83,11 @@ export class RoomsComponent implements OnInit {
     console.log("click seat", event);
     if (event.detail.state) {
       this.seatsCount++;
+      this.seatsSelectedArray.push(event.detail.text);
     } else {
       this.seatsCount--;
+      this.seatsSelectedArray.pop();
     }
-    this.seatsSelectedArray.push(event.detail.text);
     this.reservationService.atSelectSeats(this.seatsSelectedArray);
     this.showEmailAndConfirm();
     console.log("sillas", this.seatsCount, this.seatsSelectedArray);
